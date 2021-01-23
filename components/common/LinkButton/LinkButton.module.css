@@ -1,0 +1,20 @@
+.linkButton{
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    border: 0.2rem solid #3D5AFE;
+    color: #3D5AFE;
+    background: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.linkButton:hover{
+    background: #3D5AFE;
+    color: white;
+}
+
+.secondary {
+    border: 0.2rem solid white;
+    background: white;
+    color: #3D5AFE;
+}

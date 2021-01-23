@@ -1,0 +1,22 @@
+.socialMedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    color: #3D5AFE;
+    background: white;
+    border: 0.2rem solid white;
+    border-radius: 100%;
+    padding: 1rem;
+    transition: background 0.3s;
+}
+
+.socialMedia:hover{
+    background: #3D5AFE;
+    color: white;
+}
+
+.icon{
+    height: 3rem;
+}

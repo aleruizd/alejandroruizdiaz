@@ -1,0 +1,15 @@
+.skillSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center;
+    width: fit-content;
+    padding: 5rem 0;
+    margin: 0 auto;
+}
+
+@media (min-width: 840px){
+    .skillSection {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

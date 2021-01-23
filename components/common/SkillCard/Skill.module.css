@@ -1,0 +1,13 @@
+.skill > *{
+    margin-bottom: 0.3rem;
+}
+
+.skill h4{
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #3D5AFE;
+}
+
+.skill p{
+    font-weight: 300;
+}

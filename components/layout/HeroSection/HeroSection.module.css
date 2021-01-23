@@ -1,0 +1,25 @@
+.heroSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5rem;
+}
+
+.heroSection > * {
+    margin: 1rem 0;
+}
+
+.heroSection h1{
+    color: #3D5AFE;
+    font-weight: 400;
+}
+
+.heroSection h3{
+    font-weight: 300;
+}
+
+.heroSection img{
+    border-radius: 100%;
+    width: 20rem;
+}

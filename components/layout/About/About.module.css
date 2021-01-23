@@ -1,0 +1,22 @@
+.about{
+    text-align: center;
+    padding: 8rem 4rem;
+    background-color: #3D5AFE;
+    color: white;
+}
+
+.about > *{
+    margin: 2rem 0;
+}
+
+.about h2{
+    font-weight: 500;
+}
+
+.about p{
+    font-size: 1.8rem;
+    margin: 2rem auto;
+    line-height: 2.5rem;
+    font-weight: 200;
+    max-width: 80rem;
+}

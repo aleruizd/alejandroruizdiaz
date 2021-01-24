@@ -14,13 +14,13 @@ export default async function handler(req, res) {
     }
 
     const oauth2Client = new OAuth2(
-        process.env.CLIENT_ID,
-        process.env.CLIENT_SECRET,
+        `${process.env.CLIENT_ID}`,
+        `${process.env.CLIENT_SECRET}`,
         "https://developers.google.com/oauthplayground"
     )
 
     oauth2Client.setCredentials({
-        refresh_token: process.env.REFRESH_TOKEN
+        refresh_token:`${process.env.REFRESH_TOKE}` 
     });
 
     const accessToken = await oauth2Client.getAccessToken();
@@ -30,9 +30,9 @@ export default async function handler(req, res) {
         auth: {
             type: 'OAuth2',
             user: `${process.env.EMAIL}`,
-            clientId: process.env.CLIENT_ID,
-            clientSecret: process.env.CLIENT_SECRET,
-            refreshToken: process.env.REFRESH_TOKEN,
+            clientId: `${process.env.CLIENT_ID}`,
+            clientSecret: `${process.env.CLIENT_SECRET}`,
+            refreshToken: `${process.env.REFRESH_TOKEN}`,
             accessToken
         }
     })

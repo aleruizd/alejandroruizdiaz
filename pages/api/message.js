@@ -12,6 +12,9 @@ export default function handler(req, res) {
 
     let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
+        port: 587,
+        ignoreTLS: false,
+        secure: false,
         auth: {
             user: `${process.env.EMAIL}`,
             pass: `${process.env.PASS}`, 

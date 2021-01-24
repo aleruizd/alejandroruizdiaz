@@ -14,13 +14,13 @@ export default async function handler(req, res) {
     }
 
     const oauth2Client = new OAuth2(
-        `${process.env.CLIENT_ID}`,
-        `${process.env.CLIENT_SECRET}`,
+        process.env.CLIENT_ID,
+        process.env.CLIENT_SECRET,
         "https://developers.google.com/oauthplayground"
     )
 
     oauth2Client.setCredentials({
-        refresh_token:`${process.env.REFRESH_TOKE}` 
+        refresh_token: process.env.REFRESH_TOKEN 
     });
 
     const accessToken = await oauth2Client.getAccessToken();
@@ -29,10 +29,10 @@ export default async function handler(req, res) {
         host: "smtp.gmail.com",
         auth: {
             type: 'OAuth2',
-            user: `${process.env.EMAIL}`,
-            clientId: `${process.env.CLIENT_ID}`,
-            clientSecret: `${process.env.CLIENT_SECRET}`,
-            refreshToken: `${process.env.REFRESH_TOKEN}`,
+            user: process.env.EMAIL,
+            clientId: process.env.CLIENT_ID,
+            clientSecret: process.env.CLIENT_SECRET,
+            refreshToken: process.env.REFRESH_TOKEN,
             accessToken
         }
     })
@@ -53,10 +53,6 @@ export default async function handler(req, res) {
             res.status(500).json({
                 ok: false,
                 error: error.message,
-                clientId: `${process.env.CLIENT_ID}`,
-                clientSecret: `${process.env.CLIENT_SECRET}`,
-                refreshToken: `${process.env.REFRESH_TOKEN}`,
-                accessToken
             });
         } else {
             console.log('Mensaje enviado');

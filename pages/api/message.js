@@ -1,5 +1,4 @@
 import nodemailer from 'nodemailer'
-import smtpTransport from 'nodemailer-smtp-transport'
 
 export default function handler(req, res) {
     let {name,email,message} = JSON.parse(req.body);
@@ -11,13 +10,13 @@ export default function handler(req, res) {
         })
     }
 
-    let transporter = nodemailer.createTransport(smtpTransport({
+    let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         auth: {
-            user: `${process.env.EMAIL}`,
-            pass: `${process.env.PASS}`, 
+            user: `alejandro.ruizdiaz2000@gmail.com`,
+            pass: `genesis130`, 
         },
-    }))
+    })
 
     let info = {
         from: `${email}`, 

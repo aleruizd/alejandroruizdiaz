@@ -10,7 +10,7 @@ export default function Project({project}){
                 <p>{project.description}</p>
                 <div className={styles.buttons}>
                     <ProjectButton href={project.html_url}>GitHub Repo</ProjectButton>
-                    <ProjectButton href={`http://${project.homepage}`}>Website</ProjectButton>
+                    <ProjectButton href={project.homepage}>Website</ProjectButton>
                 </div>
             </div>
         </div>

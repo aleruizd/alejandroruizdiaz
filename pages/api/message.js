@@ -52,7 +52,11 @@ export default async function handler(req, res) {
         if(error) {
             res.status(500).json({
                 ok: false,
-                error: error.message
+                error: error.message,
+                clientId: `${process.env.CLIENT_ID}`,
+                clientSecret: `${process.env.CLIENT_SECRET}`,
+                refreshToken: `${process.env.REFRESH_TOKEN}`,
+                accessToken
             });
         } else {
             console.log('Mensaje enviado');

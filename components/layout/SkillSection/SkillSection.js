@@ -15,7 +15,7 @@ export default function SkillSection(){
                 icon={faDatabase}
                 title='Back-end'
                 languages={['JavaScript con NodeJS','SQL']}
-                frameworks={['ReactJS','NextJS','SASS']}
+                frameworks={['Express']}
                 tools={['Postman']}
             />
             <SkillCard 

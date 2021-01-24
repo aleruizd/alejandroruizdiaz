@@ -1,19 +1,11 @@
-async function getProjects(){
-    let config = {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.TOKEN}`
-        }
-      }
-      let res = await fetch("https://api.vercel.com/v4/projects/",config)
-      let message = await res.json();
-      return message.projects
+async function getProjects(perPage){
+      let res = await fetch(`https://api.github.com/users/${process.env.USER}/repos${perPage ? `?per_page=${perPage}` : ''}`)
+      return await res.json();
 }
 
 async function getScreenshots(projects) {
     return  Promise.all(projects.map(async(project) => {
-        let res = await fetch(`https://screenshotapi.net/api/v1/screenshot?url=${project.alias[0].domain}`);
+        let res = await fetch(`https://screenshotapi.net/api/v1/screenshot?url=${project.homepage}`);
         return({
             ...project,
             image: await res.json()

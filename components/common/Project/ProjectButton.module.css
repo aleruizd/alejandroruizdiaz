@@ -1,0 +1,15 @@
+.projectButton{
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    border: 0.2rem solid white;
+    color: white;
+    background: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    outline: none;
+}
+
+.projectButton:hover{
+    background: white;
+    color: #141C3A;
+}

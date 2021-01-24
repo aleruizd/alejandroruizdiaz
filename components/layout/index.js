@@ -5,6 +5,7 @@ import HeroSection from './HeroSection/HeroSection'
 import About from './About/About'
 import SkillSection from './SkillSection/SkillSection'
 import Projects from './Projects/Projects'
+import Contact from './Contact/Contact'
 import Footer from './Footer/Footer'
 
 export {
@@ -15,5 +16,6 @@ export {
     About,
     SkillSection,
     Projects,
+    Contact,
     Footer
 }

@@ -1,13 +1,18 @@
 import styles from './Project.module.css'
+import ProjectButton from './ProjectButton'
 
 export default function Project({project}){
     return( 
-        <a href={`http://${project.alias[0].domain}`} className={styles.project}>
-            {console.log(project)}
+        <div className={styles.project}>
             <img className={styles.background} src={project.image.screenshot}/>
-            <div className={styles.description}>
-
+            <div className={`${styles.description}`}>
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+                <div className={styles.buttons}>
+                    <ProjectButton href={project.html_url}>GitHub Repo</ProjectButton>
+                    <ProjectButton href={`http://${project.homepage}`}>Website</ProjectButton>
+                </div>
             </div>
-        </a>
+        </div>
     )
 }

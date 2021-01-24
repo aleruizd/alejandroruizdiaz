@@ -13,7 +13,7 @@ export default function About() {
             Desde que aprendi a programar siempre he tratado de mejorar mis habilidades creando 
             proyectos personales realizando tanto el Front-end como el Back-end. Actualmente 
             me dedico al desarrollo web Front-end con ReactJS y NextJS.</p>
-            <LinkButton href="#" color='secondary'>Descargar CV</LinkButton>
+            <LinkButton href="#" color='secondary' mobileAvailable>Descargar CV</LinkButton>
         </section>
     )
 }

@@ -1,0 +1,54 @@
+.contact{
+    width: 100%;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.contact h2{
+    font-weight: 400;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form input, .contact form textarea {
+    font-family: 'Roboto', sans-serif;
+    margin: 2rem 0;
+    padding: 1rem;
+    border: none;
+    border-bottom: 0.1rem solid #cacaca;
+    outline-color: #8a9cff;
+}
+
+.contact form textarea {
+    resize: vertical
+}
+
+.contact form input[type="submit"]{
+    border: 0.2rem solid #3D5AFE;
+    color: #3D5AFE;
+    border-radius: 5rem;
+    background: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-weight: 500;
+    outline: none;
+}
+
+.contact form input[type="submit"]:hover{
+    background: #3D5AFE;
+    color: white;
+}
+
+.errorMessage{
+    color: red;
+    font-weight: 500;
+}
+
+@media (min-width: 768px){
+    .contact {
+        width: 70rem;
+    }
+}

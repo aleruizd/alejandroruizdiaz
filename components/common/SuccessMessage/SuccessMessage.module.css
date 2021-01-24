@@ -1,0 +1,24 @@
+.successMessage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.successMessage > *{
+    margin-bottom: 1rem;
+}
+
+.successMessage img {
+    width: 25rem;
+    margin-left: -3rem;
+}
+
+.successMessage h2{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.successMessage p{
+    font-weight: 400;
+}

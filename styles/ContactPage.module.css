@@ -1,0 +1,13 @@
+.contactPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    text-align: center;
+}
+
+.contactPage h2{
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+}

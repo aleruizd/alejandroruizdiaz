@@ -15,9 +15,9 @@ export default function Footer(){
                 <Link href="/contacto"><a>Contacto</a></Link>
             </nav>
             <div className={styles.socialMediaList}>
-                <SocialMedia href="#" icon={faLinkedinIn}/>
-                <SocialMedia href="#" icon={faGithub}/>
-                <SocialMedia href="#" icon={faEnvelope}/>
+                <SocialMedia href="https://www.linkedin.com/in/alejandro-ruiz-diaz-3942701a0/" icon={faLinkedinIn}/>
+                <SocialMedia href="https://github.com/aleruizd" icon={faGithub}/>
+                <SocialMedia href={`https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${process.env.EMAIL}`} icon={faEnvelope}/>
             </div>
         </footer>
     )

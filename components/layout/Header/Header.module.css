@@ -1,6 +1,26 @@
 .header{
+    width: 100%;
+    background: white;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 4rem;
+    height: 7rem;
+    padding: 0 2rem;
+    border-bottom: 0.1rem solid #eeeeee;
+    z-index: 100;
+}
+
+.nav{
+    background-color: red;
+}
+
+.fixedOffset{
+    height: 7rem;
+}
+
+@media (min-width: 768px){
+    .header {
+        padding: 0 3rem;
+    }
 }

@@ -1,7 +1,8 @@
 module.exports = {
     env: {
-        USER: process.env.USER,
         EMAIL: process.env.EMAIL,
-        PASS: process.env.PASS
+        REFRESH_TOKEN: process.env.REFRESH_TOKEN,
+        CLIENT_SECRET: process.env.CLIENT_SECRET,
+        CLIENT_ID: process.env.CLIENT_ID,
     },
   }

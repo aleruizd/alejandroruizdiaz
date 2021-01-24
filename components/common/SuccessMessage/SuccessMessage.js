@@ -5,7 +5,7 @@ export default function SuccessMessage(){
         <div className={styles.successMessage}>
             <img src="/mailbox.png" alt='success image'/>
             <h2>Mensaje recibido. Gracias!</h2>
-            <p>Estare en contacto contigo muy pronto.</p>
+            <p>Estaré en contacto contigo muy pronto.</p>
         </div>
     )
 }

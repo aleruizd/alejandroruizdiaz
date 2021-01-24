@@ -1,6 +1,9 @@
 import nodemailer from 'nodemailer'
+import { google } from 'googleapis'
 
-export default function handler(req, res) {
+const OAuth2 = google.auth.OAuth2;
+
+export default async function handler(req, res) {
     let {name,email,message} = JSON.parse(req.body);
 
     if(name.trim() == '' || email.trim() == '' || message.trim() == ''){
@@ -10,14 +13,28 @@ export default function handler(req, res) {
         })
     }
 
+    const oauth2Client = new OAuth2(
+        process.env.CLIENT_ID,
+        process.env.CLIENT_SECRET,
+        "https://developers.google.com/oauthplayground"
+    )
+
+    oauth2Client.setCredentials({
+        refresh_token: process.env.REFRESH_TOKEN
+    });
+
+    const accessToken = await oauth2Client.getAccessToken();
+
     let transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
-        port: 465,
-        secure: true, 
         auth: {
+            type: 'OAuth2',
             user: `${process.env.EMAIL}`,
-            pass: `${process.env.PASS}`, 
-        },
+            clientId: process.env.CLIENT_ID,
+            clientSecret: process.env.CLIENT_SECRET,
+            refreshToken: process.env.REFRESH_TOKEN,
+            accessToken
+        }
     })
 
     let info = {

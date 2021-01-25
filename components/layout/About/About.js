@@ -14,7 +14,7 @@ export default function About() {
                  mis habilidades creando proyectos personales realizando tanto el Front-end 
                  como el Back-end. Actualmente me dedico al desarrollo web Front-end 
                  con ReactJS y NextJS.</p>
-            <LinkButton href="/CV-AlejandroRuizDiaz.pdf" color='secondary' mobileAvailable>Descargar CV</LinkButton>
+            <LinkButton href={process.env.CV_LINK} color='secondary' mobileAvailable>Descargar CV</LinkButton>
         </section>
     )
 }

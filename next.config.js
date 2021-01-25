@@ -4,5 +4,6 @@ module.exports = {
         REFRESH_TOKEN: process.env.REFRESH_TOKEN,
         CLIENT_SECRET: process.env.CLIENT_SECRET,
         CLIENT_ID: process.env.CLIENT_ID,
+        CV_LINK: process.env.CV_LINK
     },
   }

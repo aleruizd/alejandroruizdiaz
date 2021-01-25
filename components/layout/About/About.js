@@ -1,6 +1,5 @@
 import styles from './About.module.css';
 import { LinkButton } from '../../common'
-import Link from 'next/link';
 
 export default function About() {
     return (

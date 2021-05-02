@@ -5,7 +5,7 @@ async function getProjects(perPage){
 
 async function getScreenshots(projects) {
     return  Promise.all(projects.map(async(project) => {
-        let res = await fetch(`https://screenshotapi.net/api/v1/screenshot?url=${project.homepage}`);
+        let res = await fetch(`https://shot.screenshotapi.net/screenshot?token=${process.env.SCREEN_TOKEN}&url=${project.homepage}`);
         return({
             ...project,
             image: await res.json()

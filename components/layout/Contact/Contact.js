@@ -13,7 +13,6 @@ export default function Contact() {
 
     async function sendMessage(event) {
         event.preventDefault();
-        console.log(state);
 
         let config = {
             method: 'POST',

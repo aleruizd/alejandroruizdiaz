@@ -21,7 +21,7 @@ export default function ProjectsPage({projects}) {
 export async function getStaticProps(){
     let projects = await getProjects();
     projects = await getScreenshots(projects);
-  
+
     return {
       props: {
         projects
